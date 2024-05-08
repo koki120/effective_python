@@ -17,11 +17,12 @@ if (count := fresh_fruit.get("apple")) > 4:
     print(f"apple is {count}. make 🍹")
 else:
     print(f"apple is {count}. out of stack")
+assert count == 10  # if文のスコープ外でも使える。
+
 
 # switch文がpythonにないので、:=を使って代用する。
 
 # NG
-
 count2 = fresh_fruit.get("banana")
 if count2 >= 2:
     print(count2)
@@ -35,7 +36,6 @@ else:
             print(count)
         else:
             print("Nothing")
-
 
 # OK
 if (count := fresh_fruit.get("banana")) >= 2:
